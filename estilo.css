@@ -1,3 +1,7 @@
+:root{
+    --color-text : black
+}
+
 .container{
     display: flex;
     justify-content: space-between;
@@ -5,16 +9,18 @@
     border: 1px solid black;
     flex-flow: row wrap;
     align-items: center;
+    margin-top: 10px;
 }
 
 .cabeçalho{
     text-align: center;
-    font-size: 1.3rem;
+    font-size: clamp(1.2rem,5vw,1.5rem);
+    display: flex;
 }
 
 h1{
     color: aqua;
-    font-size: 2.5rem;
+    font-size: 4.5rem;
 }
 
 .first{
@@ -38,7 +44,7 @@ a{
     text-decoration: none;
     font-size: 17px;
     margin: 50px;
-    width: 150px; 
+    width: clamp(100px,50vw,150px); 
     height: 50px; 
     padding: 10px; 
     display: inline-block; 
@@ -81,4 +87,39 @@ footer{
     .container{
         flex-direction: column;
     }
+}
+body.dark-mode{
+    background-color: black;
+    color:white;
+
+}
+
+.container.dark-mode{
+    border: 2px solid white;
+}
+
+button{
+    width: 50px;
+    height: 50px;border-radius: 100px;
+    padding: 1rem;
+    border:2px solid;
+    background-color: blue;
+}
+
+.primeiro{
+    margin-left: 20px;
+    width: 34%;
+}
+
+.segundo{
+    margin-top: 130px;
+    font-size: 1rem;
+    margin-left: 30px;
+    width: 33%;
+}
+
+.terceiro{
+    margin-left: 150px;
+    margin-top: 60px;
+    width: 33%;
 }
